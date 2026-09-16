@@ -1,0 +1,247 @@
+/* ===== UNIVERSITY PORTAL - DESIGN TOKENS ===== */
+
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Primary Colors */
+  --primary: #4F46E5;
+  --primary-light: #818CF8;
+  --primary-dark: #3730A3;
+  --primary-50: #EEF2FF;
+  
+  /* Secondary */
+  --secondary: #0EA5E9;
+  --secondary-light: #38BDF8;
+  --secondary-dark: #0284C7;
+  --secondary-50: #F0F9FF;
+  
+  /* Accent */
+  --accent: #F59E0B;
+  --accent-light: #FBBF24;
+  --accent-dark: #D97706;
+  
+  /* Semantic Colors */
+  --success: #10B981;
+  --success-light: #D1FAE5;
+  --success-dark: #059669;
+  --warning: #F59E0B;
+  --warning-light: #FEF3C7;
+  --warning-dark: #D97706;
+  --danger: #EF4444;
+  --danger-light: #FEE2E2;
+  --danger-dark: #DC2626;
+  --info: #3B82F6;
+  --info-light: #DBEAFE;
+  --info-dark: #2563EB;
+  
+  /* Background */
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #F1F5F9;
+  --bg-tertiary: #E2E8F0;
+  
+  /* Surface (for cards, panels) */
+  --surface: rgba(255,255,255,0.85);
+  --surface-hover: rgba(255,255,255,0.95);
+  --surface-solid: #FFFFFF;
+  
+  /* Text */
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-tertiary: #94A3B8;
+  --text-inverse: #FFFFFF;
+  
+  /* Borders */
+  --border: #E2E8F0;
+  --border-light: #F1F5F9;
+  --border-focus: #818CF8;
+  
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Glass */
+  --glass-bg: rgba(255,255,255,0.7);
+  --glass-border: rgba(255,255,255,0.3);
+  --glass-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  
+  /* Layout */
+  --sidebar-width: 260px;
+  --sidebar-collapsed: 72px;
+  --navbar-height: 64px;
+  --page-padding: 24px;
+  --max-width: 1400px;
+  
+  /* Z-index */
+  --z-sidebar: 100;
+  --z-navbar: 90;
+  --z-modal: 200;
+  --z-toast: 300;
+  --z-tooltip: 150;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --primary: #818CF8;
+  --primary-light: #A5B4FC;
+  --primary-dark: #6366F1;
+  --primary-50: rgba(99,102,241,0.1);
+  
+  --secondary: #38BDF8;
+  --secondary-light: #7DD3FC;
+  --secondary-50: rgba(56,189,248,0.1);
+  
+  --success-light: rgba(16,185,129,0.15);
+  --warning-light: rgba(245,158,11,0.15);
+  --danger-light: rgba(239,68,68,0.15);
+  --info-light: rgba(59,130,246,0.15);
+  
+  --bg-primary: #0F172A;
+  --bg-secondary: #1E293B;
+  --bg-tertiary: #334155;
+  
+  --surface: rgba(30,41,59,0.85);
+  --surface-hover: rgba(30,41,59,0.95);
+  --surface-solid: #1E293B;
+  
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-tertiary: #64748B;
+  
+  --border: #334155;
+  --border-light: #1E293B;
+  
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.2);
+  --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.3), 0 2px 4px -1px rgba(0,0,0,0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.3), 0 4px 6px -2px rgba(0,0,0,0.2);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+  
+  --glass-bg: rgba(15,23,42,0.7);
+  --glass-border: rgba(51,65,85,0.3);
+  --glass-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes toastIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toastOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
